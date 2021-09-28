@@ -29,6 +29,7 @@ namespace StockTracking
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnEmployee = new System.Windows.Forms.Button();
             this.butExit = new System.Windows.Forms.Button();
             this.butAddStock = new System.Windows.Forms.Button();
             this.butCategory = new System.Windows.Forms.Button();
@@ -38,12 +39,26 @@ namespace StockTracking
             this.butSales = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // btnEmployee
+            // 
+            this.btnEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.Image = global::StockTracking.Properties.Resources.employee_management;
+            this.btnEmployee.Location = new System.Drawing.Point(640, 224);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(167, 195);
+            this.btnEmployee.TabIndex = 7;
+            this.btnEmployee.Text = "Employee";
+            this.btnEmployee.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEmployee.UseVisualStyleBackColor = false;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
+            // 
             // butExit
             // 
             this.butExit.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.butExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butExit.Image = global::StockTracking.Properties.Resources.exit;
-            this.butExit.Location = new System.Drawing.Point(229, 435);
+            this.butExit.Location = new System.Drawing.Point(331, 452);
             this.butExit.Name = "butExit";
             this.butExit.Size = new System.Drawing.Size(167, 195);
             this.butExit.TabIndex = 6;
@@ -99,7 +114,7 @@ namespace StockTracking
             this.butCustomer.BackColor = System.Drawing.Color.Lime;
             this.butCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butCustomer.Image = global::StockTracking.Properties.Resources.customer;
-            this.butCustomer.Location = new System.Drawing.Point(31, 23);
+            this.butCustomer.Location = new System.Drawing.Point(99, 23);
             this.butCustomer.Name = "butCustomer";
             this.butCustomer.Size = new System.Drawing.Size(167, 195);
             this.butCustomer.TabIndex = 2;
@@ -114,7 +129,7 @@ namespace StockTracking
             this.butProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butProduct.ForeColor = System.Drawing.Color.Fuchsia;
             this.butProduct.Image = global::StockTracking.Properties.Resources.product;
-            this.butProduct.Location = new System.Drawing.Point(229, 23);
+            this.butProduct.Location = new System.Drawing.Point(319, 23);
             this.butProduct.Name = "butProduct";
             this.butProduct.Size = new System.Drawing.Size(167, 195);
             this.butProduct.TabIndex = 1;
@@ -128,7 +143,7 @@ namespace StockTracking
             this.butSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.butSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butSales.Image = global::StockTracking.Properties.Resources.sales1;
-            this.butSales.Location = new System.Drawing.Point(442, 23);
+            this.butSales.Location = new System.Drawing.Point(530, 23);
             this.butSales.Name = "butSales";
             this.butSales.Size = new System.Drawing.Size(167, 195);
             this.butSales.TabIndex = 0;
@@ -141,7 +156,8 @@ namespace StockTracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 659);
+            this.ClientSize = new System.Drawing.Size(836, 659);
+            this.Controls.Add(this.btnEmployee);
             this.Controls.Add(this.butExit);
             this.Controls.Add(this.butAddStock);
             this.Controls.Add(this.butCategory);
@@ -166,5 +182,6 @@ namespace StockTracking
         private System.Windows.Forms.Button butCategory;
         private System.Windows.Forms.Button butDeleted;
         private System.Windows.Forms.Button butExit;
+        private System.Windows.Forms.Button btnEmployee;
     }
 }

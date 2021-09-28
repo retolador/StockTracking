@@ -7,21 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace StockTracking.DAL
+namespace StockTracking.DAL.DTO
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class SALE
+    public partial class PRODUCT
     {
         public int ID { get; set; }
-        public int ProductID { get; set; }
-        public int CustomerID { get; set; }
+        public string ProductName { get; set; }
         public int CategoryID { get; set; }
-        public int ProductSalesAmount { get; set; }
-        public int ProductSalesPrice { get; set; }
-        public System.DateTime SalesDate { get; set; }
+        public int StockAmount { get; set; }
+        public int Price { get; set; }
         public bool isDeleted { get; set; }
-        public Nullable<System.DateTime> DeletedDate { get; set; }
+        public Nullable<System.DateTime> DeleteDate { get; set; }
     }
 }

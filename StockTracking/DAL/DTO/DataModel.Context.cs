@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace StockTracking.DAL
+namespace StockTracking.DAL.DTO
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class StockTrakingEntities : DbContext
+    public partial class StockTrakingEntities1 : DbContext
     {
-        public StockTrakingEntities()
-            : base("name=StockTrakingEntities")
+        public StockTrakingEntities1()
+            : base("name=StockTrakingEntities1")
         {
         }
     
@@ -27,7 +27,9 @@ namespace StockTracking.DAL
     
         public virtual DbSet<CATEGORY> CATEGORies { get; set; }
         public virtual DbSet<CUSTOMER> CUSTOMERs { get; set; }
+        public virtual DbSet<PERMISSION> PERMISSIONs { get; set; }
         public virtual DbSet<PRODUCT> PRODUCTs { get; set; }
         public virtual DbSet<SALE> SALES { get; set; }
+        public virtual DbSet<USER> USERs { get; set; }
     }
 }

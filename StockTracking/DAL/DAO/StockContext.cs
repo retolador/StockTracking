@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StockTracking.DAL.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace StockTracking.DAL.DAO
 {
     public class StockContext
     {
-        public StockTrakingEntities db = new StockTrakingEntities();
+        public StockTrakingEntities1 db = new StockTrakingEntities1();
     }
 }

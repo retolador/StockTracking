@@ -61,6 +61,7 @@ namespace StockTracking
                     product.ProductName = txtName.Text;
                     product.CategoryID = Convert.ToInt32(cmbCategory.SelectedValue);
                     product.Price = Convert.ToInt32(txtPrice.Text);
+                   
                     if (bll.Insert(product))
                     {
 
