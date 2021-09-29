@@ -45,7 +45,7 @@ namespace StockTracking
             this.txtUserName.Location = new System.Drawing.Point(190, 53);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(215, 32);
-            this.txtUserName.TabIndex = 22;
+            this.txtUserName.TabIndex = 0;
             // 
             // label4
             // 
@@ -63,7 +63,7 @@ namespace StockTracking
             this.butClose.Location = new System.Drawing.Point(207, 256);
             this.butClose.Name = "butClose";
             this.butClose.Size = new System.Drawing.Size(124, 62);
-            this.butClose.TabIndex = 24;
+            this.butClose.TabIndex = 4;
             this.butClose.Text = "Close";
             this.butClose.UseVisualStyleBackColor = true;
             this.butClose.Click += new System.EventHandler(this.butClose_Click);
@@ -74,7 +74,7 @@ namespace StockTracking
             this.butSave.Location = new System.Drawing.Point(40, 256);
             this.butSave.Name = "butSave";
             this.butSave.Size = new System.Drawing.Size(124, 62);
-            this.butSave.TabIndex = 23;
+            this.butSave.TabIndex = 3;
             this.butSave.Text = "Save";
             this.butSave.UseVisualStyleBackColor = true;
             this.butSave.Click += new System.EventHandler(this.butSave_Click);
@@ -105,7 +105,7 @@ namespace StockTracking
             this.txtPassword.Location = new System.Drawing.Point(190, 105);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(215, 32);
-            this.txtPassword.TabIndex = 28;
+            this.txtPassword.TabIndex = 1;
             // 
             // cmbPermission
             // 
@@ -114,7 +114,7 @@ namespace StockTracking
             this.cmbPermission.Location = new System.Drawing.Point(190, 153);
             this.cmbPermission.Name = "cmbPermission";
             this.cmbPermission.Size = new System.Drawing.Size(215, 33);
-            this.cmbPermission.TabIndex = 29;
+            this.cmbPermission.TabIndex = 2;
             // 
             // FrmUser
             // 

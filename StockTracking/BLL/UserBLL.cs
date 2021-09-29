@@ -15,7 +15,9 @@ namespace StockTracking.BLL
         PermissionDAO permissiondao = new PermissionDAO();
         public bool Delete(UserDetailDTO entity)
         {
-            throw new NotImplementedException();
+            USER user = new USER();
+            user.ID = entity.ID;
+            return dao.Delete(user);
         }
 
         public bool GetBack(UserDetailDTO entity)
@@ -35,14 +37,19 @@ namespace StockTracking.BLL
         public UserDTO Select()
         {
             UserDTO dto = new UserDTO();
-            //dto.Users = dao.Select();
+            dto.Users = dao.Select();
             dto.Permissions = permissiondao.Select();
             return dto;
         }
 
         public bool Update(UserDetailDTO entity)
         {
-            throw new NotImplementedException();
+            USER user = new USER();
+            user.ID = entity.ID;
+            user.Nombre = entity.UserName;
+            user.Contraseña = entity.Password;
+            user.IDPermiso = entity.PermissionID;
+            return dao.Update(user);
         }
     }
 }

@@ -26,29 +26,51 @@ namespace StockTracking
         }
         UserBLL bll = new UserBLL();
         public UserDTO dto = new UserDTO();
+        public UserDetailDTO detail = new UserDetailDTO();
+        public bool isUpdate = false;
         private void butSave_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text.Trim() == "")
-                MessageBox.Show("User name is empty!!");
-            else if (txtPassword.Text.Trim() == "")
-                MessageBox.Show("The password is empty");
-            else if (cmbPermission.SelectedIndex == -1)
-                MessageBox.Show("User doesn't have any role!!");
-            else
+            if (!isUpdate)
             {
-                UserDetailDTO user = new UserDetailDTO();
-                user.UserName = txtUserName.Text;
-                user.Password = txtPassword.Text;
-                user.PermissionID = Convert.ToInt32(cmbPermission.SelectedValue);
-                if (bll.Insert(user))
+                if (txtUserName.Text.Trim() == "")
+                    MessageBox.Show("User name is empty!!");
+                else if (txtPassword.Text.Trim() == "")
+                    MessageBox.Show("The password is empty");
+                else if (cmbPermission.SelectedIndex == -1)
+                    MessageBox.Show("User doesn't have any role!!");
+                else
                 {
-                    MessageBox.Show("User added correctly");
-                    txtUserName.Clear();
-                    txtPassword.Clear();
-                    cmbPermission.SelectedIndex = -1;
+                    UserDetailDTO user = new UserDetailDTO();
+                    user.UserName = txtUserName.Text;
+                    user.Password = txtPassword.Text;
+                    user.PermissionID = Convert.ToInt32(cmbPermission.SelectedValue);
+                    if (bll.Insert(user))
+                    {
+                        MessageBox.Show("User added correctly");
+                        txtUserName.Clear();
+                        txtPassword.Clear();
+                        cmbPermission.SelectedIndex = -1;
+                    }
                 }
             }
-
+            else
+            {
+                if (txtUserName.Text == detail.UserName &&
+                    txtPassword.Text == detail.Password &&
+                    Convert.ToInt32(cmbPermission.SelectedValue) == detail.PermissionID)
+                    MessageBox.Show("You change nothing!!!");
+                else
+                {
+                    detail.UserName = txtUserName.Text;
+                    detail.Password = txtPassword.Text;
+                    detail.PermissionID = Convert.ToInt32(cmbPermission.SelectedValue);
+                    if (bll.Update(detail))
+                    {
+                        MessageBox.Show("User was updated");
+                        this.Close();
+                    }
+                }
+            }
         }
 
         private void FrmUser_Load(object sender, EventArgs e)
@@ -57,6 +79,12 @@ namespace StockTracking
             cmbPermission.DisplayMember = "PermissionName";
             cmbPermission.ValueMember = "ID";
             cmbPermission.SelectedIndex = -1;
+            if (isUpdate)
+            {
+                txtUserName.Text = detail.UserName;
+                txtPassword.Text = detail.Password;
+                cmbPermission.SelectedValue = detail.PermissionID;
+            }
         }
     }
 }

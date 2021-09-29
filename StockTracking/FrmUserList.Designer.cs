@@ -71,7 +71,7 @@ namespace StockTracking
             this.btnClear.Location = new System.Drawing.Point(507, 45);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(126, 44);
-            this.btnClear.TabIndex = 39;
+            this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.button2_Click);
@@ -82,9 +82,10 @@ namespace StockTracking
             this.btnSearch.Location = new System.Drawing.Point(387, 45);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(114, 44);
-            this.btnSearch.TabIndex = 38;
+            this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbPermission
             // 
@@ -93,7 +94,7 @@ namespace StockTracking
             this.cmbPermission.Location = new System.Drawing.Point(420, 3);
             this.cmbPermission.Name = "cmbPermission";
             this.cmbPermission.Size = new System.Drawing.Size(192, 28);
-            this.cmbPermission.TabIndex = 34;
+            this.cmbPermission.TabIndex = 2;
             // 
             // label2
             // 
@@ -111,7 +112,7 @@ namespace StockTracking
             this.txtPassword.Location = new System.Drawing.Point(128, 45);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(162, 26);
-            this.txtPassword.TabIndex = 32;
+            this.txtPassword.TabIndex = 1;
             // 
             // label1
             // 
@@ -129,7 +130,7 @@ namespace StockTracking
             this.txtUserName.Location = new System.Drawing.Point(128, 6);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(162, 26);
-            this.txtUserName.TabIndex = 29;
+            this.txtUserName.TabIndex = 0;
             // 
             // label4
             // 
@@ -159,9 +160,10 @@ namespace StockTracking
             this.butDelete.Location = new System.Drawing.Point(388, 20);
             this.butDelete.Name = "butDelete";
             this.butDelete.Size = new System.Drawing.Size(124, 62);
-            this.butDelete.TabIndex = 37;
+            this.butDelete.TabIndex = 2;
             this.butDelete.Text = "Delete";
             this.butDelete.UseVisualStyleBackColor = true;
+            this.butDelete.Click += new System.EventHandler(this.butDelete_Click);
             // 
             // butUpdate
             // 
@@ -169,9 +171,10 @@ namespace StockTracking
             this.butUpdate.Location = new System.Drawing.Point(258, 20);
             this.butUpdate.Name = "butUpdate";
             this.butUpdate.Size = new System.Drawing.Size(124, 62);
-            this.butUpdate.TabIndex = 36;
+            this.butUpdate.TabIndex = 1;
             this.butUpdate.Text = "Update";
             this.butUpdate.UseVisualStyleBackColor = true;
+            this.butUpdate.Click += new System.EventHandler(this.butUpdate_Click);
             // 
             // butAdd
             // 
@@ -179,7 +182,7 @@ namespace StockTracking
             this.butAdd.Location = new System.Drawing.Point(128, 20);
             this.butAdd.Name = "butAdd";
             this.butAdd.Size = new System.Drawing.Size(124, 62);
-            this.butAdd.TabIndex = 35;
+            this.butAdd.TabIndex = 0;
             this.butAdd.Text = "Add";
             this.butAdd.UseVisualStyleBackColor = true;
             this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
@@ -190,13 +193,14 @@ namespace StockTracking
             this.buttClose.Location = new System.Drawing.Point(518, 20);
             this.buttClose.Name = "buttClose";
             this.buttClose.Size = new System.Drawing.Size(124, 62);
-            this.buttClose.TabIndex = 38;
+            this.buttClose.TabIndex = 3;
             this.buttClose.Text = "Close";
             this.buttClose.UseVisualStyleBackColor = true;
             this.buttClose.Click += new System.EventHandler(this.buttClose_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 100);
@@ -204,6 +208,7 @@ namespace StockTracking
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(800, 256);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
             // FrmUserList
             // 
