@@ -31,6 +31,7 @@ namespace StockTracking.DAL.DAO
             throw new NotImplementedException();
         }
 
+
         public bool Insert(USER entity)
         {
             try
@@ -78,6 +79,11 @@ namespace StockTracking.DAL.DAO
 
                 throw ex;
             }
+        }
+
+        public List<UserDetailDTO> Select(USER entity)
+        {
+            throw new NotImplementedException();
         }
 
         public List<UserDetailDTO> Select(bool isDeleted)

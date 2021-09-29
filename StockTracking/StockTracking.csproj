@@ -113,6 +113,12 @@
     </Compile>
     <Compile Include="DAL\DTO\UserDetailDTO.cs" />
     <Compile Include="DAL\DTO\UserDTO.cs" />
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,7 @@
       <DependentUpon>FrmUserList.cs</DependentUpon>
     </Compile>
     <Compile Include="General.cs" />
+    <Compile Include="GeneralUSer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCategory.resx">
@@ -220,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDeleted.resx">
       <DependentUpon>FrmDeleted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

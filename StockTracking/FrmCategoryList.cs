@@ -46,6 +46,7 @@ namespace StockTracking
             dataGridView1.DataSource = dto.Categories;
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Category Name";
+            
         }
 
         private void txtCategory_TextChanged(object sender, EventArgs e)
