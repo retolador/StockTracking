@@ -41,7 +41,31 @@ namespace StockTracking
             {
                 user.UserName = txtUser.Text;
                 user.Password = txtPassword.Text;
-                
+                user = bll.Select(user);
+                if(user == null)
+                {
+                    MessageBox.Show("Username or password is incorrect");
+                    user = new UserDetailDTO();
+                }
+                else
+                {
+                    GeneralUSer.User = user.UserName;
+                    GeneralUSer.PermissionID = user.PermissionID;
+                    if(GeneralUSer.PermissionID == 1 || GeneralUSer.PermissionID == 2 || GeneralUSer.PermissionID == 5)
+                    { //Los de ventas, reponedores y admin pod´rán ver los stocks críticos los demás no.
+                        FrmAlertStock frm = new FrmAlertStock();
+                        this.Hide();
+                        frm.ShowDialog();
+                    }
+                    else
+                    {
+                        //Los demás irán a la main page
+                        FrmMain frm = new FrmMain();
+                        this.Hide();
+                        frm.ShowDialog();
+                    }
+                    
+                }
             }
             
             

@@ -41,14 +41,14 @@ namespace StockTracking.BLL
             dto.Permissions = permissiondao.Select();
             return dto;
         }
-        public UserDTO Select(UserDetailDTO detail)
+        public UserDetailDTO Select(UserDetailDTO detail)
         {
-            UserDTO dto = new UserDTO();
             USER user = new USER();
+            UserDetailDTO userdto = new UserDetailDTO();
             user.Nombre = detail.UserName;
             user.Contraseña = detail.Password;
-            dto.Users = dao.Select(user);
-            return dto;
+            userdto = dao.Select(user);
+            return userdto;
         }
 
         public bool Update(UserDetailDTO entity)

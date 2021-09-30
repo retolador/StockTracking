@@ -81,9 +81,23 @@ namespace StockTracking.DAL.DAO
             }
         }
 
-        public List<UserDetailDTO> Select(USER entity)
+        public UserDetailDTO Select(USER entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                UserDetailDTO userdto = new UserDetailDTO();
+                USER user = db.USERs.First(x => x.Nombre == entity.Nombre && x.Contraseña == entity.Contraseña);
+                userdto.ID = user.ID;
+                userdto.UserName = user.Nombre;
+                userdto.Password = user.Contraseña;
+                userdto.PermissionID = user.IDPermiso;
+                return userdto;
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
         }
 
         public List<UserDetailDTO> Select(bool isDeleted)

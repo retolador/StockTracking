@@ -41,6 +41,8 @@ namespace StockTracking
             dataGridView1.Columns[4].Visible = false;
             dataGridView1.Columns[5].Visible = false;
             dataGridView1.Columns[6].Visible = false;
+            if (GeneralUSer.PermissionID == 1)
+                AddStock.Hide();
             if (dto.Products.Count == 0)
             {
                 FrmMain frm = new FrmMain();

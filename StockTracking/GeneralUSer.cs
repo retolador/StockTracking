@@ -8,7 +8,7 @@ namespace StockTracking
 {
     public class GeneralUSer
     {
-        public string User { get; set; }
-        public int PermissionID { get; set; }
+        public static string User { get; set; }
+        public static int PermissionID { get; set; }
     }
 }
